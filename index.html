@@ -10,14 +10,26 @@
 
 <body>
     <div id="app">
-        <button class="button" @click="increment">+1</button>
-        <button class="button" @click="decrement">-1</button>
-        <p>{{count}}</p>
-        <p v-if="count>=80" class="passed">Aクラス</p>
-        <p v-else-if="count>=60" class="passed">Bクラス</p>
-        <p v-else class="dispassed">Cクラス</p>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
-        <script src="study-vue.js"></script>
+        <div class="form-area-name">
+            <p>名前</p>
+        </div>
+        <input v-model="name" type="text" name="name" />
+        <p v-if="isInvalidName" class="errer">名前は4字以上で入力してください</p>
+
+        <div class="form-area-email">
+            <p>detarame.jp@gmail.com</p>
+        </div>
+        <input v-model="email" type="text" name="email" />
+        <p v-if="isInvalidEmail" class="errer">メールアドレスは8字以上で入力してください</p>
+
+        <div class="form-area-tel">
+            <p>0000000000</p>
+        </div>
+        <input v-model="tel" type="text" name="tel" />
+        <p v-if="isInvalidTel" class="errer">電話番号は8字以上で入力してください</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+    <script src="study-vue.js"></script>
 </body>
 
 </html>

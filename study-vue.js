@@ -2,20 +2,20 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            count: 59
+            name:'name',
+            email:'email',
+            tel:'00'
         };
     },
-    methods: {
-        increment() {
-            this.count++;
+    computed:{
+        isInvalidName(){
+            return this.name.length<4;
         },
-        decrement() {
-            this.count--;
+        isInvalidEmail(){
+            return this.email.length<8;
         },
-    },
-    // computed:{
-    //     isPass(){
-    //         return this.count >= 60;
-    //     }
-    // }
+        isInvalidTel(){
+            return this.tel.length<8;
+        }
+    }
 });
