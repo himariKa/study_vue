@@ -13,9 +13,9 @@ const app = new Vue({
             this.count--;
         },
     },
-    computed:{
-        isPass(){
-            return this.count >= 60;
-        }
-    }
+    // computed:{
+    //     isPass(){
+    //         return this.count >= 60;
+    //     }
+    // }
 });

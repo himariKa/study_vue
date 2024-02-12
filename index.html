@@ -13,8 +13,9 @@
         <button class="button" @click="increment">+1</button>
         <button class="button" @click="decrement">-1</button>
         <p>{{count}}</p>
-        <p v-if="isPass" class="passed">合格</p>
-        <p v-else class="dispassed">不合格</p>
+        <p v-if="count>=80" class="passed">Aクラス</p>
+        <p v-else-if="count>=60" class="passed">Bクラス</p>
+        <p v-else class="dispassed">Cクラス</p>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
         <script src="study-vue.js"></script>
 </body>
