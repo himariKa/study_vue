@@ -15,7 +15,9 @@ const app = new Vue({
             return this.email.length<8;
         },
         isInvalidTel(){
-            return this.tel.length<8;
+            const tel = this.tel;
+            const isErr = tel.length<8 || isNaN(Number(tel));
+            return isErr;
         }
     }
 });
