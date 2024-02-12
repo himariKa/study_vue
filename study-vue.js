@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            count: 0
+            count: 59
         };
     },
     methods: {

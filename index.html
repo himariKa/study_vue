@@ -11,7 +11,18 @@
     <div id="app">
         <button @click="increment">+1</button>
         <button @click="decrement">-1</button>
-        <p>{{count}}</p>
+        <div v-if="count>=60">
+            <p>合格です</p>
+            <section>
+                <h2>これからも頑張ろう！</h2>
+                <p>おめでとう！</p>
+            </section>
+        </div>
+        <div v-else>
+            <p>不合格です</p>
+            <h2>気合いが足りない！</h2>
+            <p>まだまだやれる！</p>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
     <script src="study-vue.js"></script>
