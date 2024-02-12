@@ -1,13 +1,16 @@
 const app = new Vue({
-    el:'#app',
-    data(){
-        return{
-            text:'hello vue!'
+    el: '#app',
+    data() {
+        return {
+            count: 0
         };
     },
-    methods:{
-        handleClick(){
-            this.text = 'button pushed'
-        }
+    methods: {
+        increment() {
+            this.count++;
+        },
+        decrement() {
+            this.count--;
+        },
     }
 });

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Vue</title>
 </head>
+
 <body>
     <div id="app">
-        <button
-        @click="handleClick">Push</button>
-        <p>{{text}}</p>
+        <button @click="increment">+1</button>
+        <button @click="decrement">-1</button>
+        <p>{{count}}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
     <script src="study-vue.js"></script>
-    
+
 </body>
+
 </html>
