@@ -4,29 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Study Vue</title>
 </head>
 
 <body>
     <div id="app">
-        <button @click="increment">+1</button>
-        <button @click="decrement">-1</button>
-        <div v-if="count>=60">
-            <p>合格です</p>
-            <section>
-                <h2>これからも頑張ろう！</h2>
-                <p>おめでとう！</p>
-            </section>
-        </div>
-        <div v-else>
-            <p>不合格です</p>
-            <h2>気合いが足りない！</h2>
-            <p>まだまだやれる！</p>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
-    <script src="study-vue.js"></script>
-
+        <button class="button" @click="increment">+1</button>
+        <button class="button" @click="decrement">-1</button>
+        <p>{{count}}</p>
+        <p v-if="isPass" class="passed">合格</p>
+        <p v-else class="dispassed">不合格</p>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+        <script src="study-vue.js"></script>
 </body>
 
 </html>
