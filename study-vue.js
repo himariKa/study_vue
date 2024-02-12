@@ -4,5 +4,10 @@ const app = new Vue({
         return{
             text:'hello vue!'
         };
+    },
+    methods:{
+        handleClick(){
+            this.text = 'button pushed'
+        }
     }
 });
